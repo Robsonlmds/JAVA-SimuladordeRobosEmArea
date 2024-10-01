@@ -1,13 +1,16 @@
-# Simulação de Movimento de Robôs
+# Simulador de Robôs em Área
 
-Este projeto simula o movimento de robôs em uma área bidimensional definida. 
+## Estrutura do Código:
 
-## Classes
+### Classes:
 
-- **Área**: Estabelece os limites do espaço onde os robôs podem operar.
-- **Robot**: Classe abstrata que define a estrutura básica dos robôs, incluindo suas posições e métodos de movimento.
-- **RoboSimples**: Implementação que permite que o robô se mova apenas para o norte.
+- **Area:** Define os limites da área em que os robôs podem se mover, com métodos para obter as coordenadas máximas (maxX e maxY).
+- **Robot:** Classe abstrata que encapsula a lógica básica para robôs, incluindo suas posições (posX e posY) e métodos abstratos para movimentos em quatro direções (norte, sul, leste, oeste).
+- **RoboSimples:** Implementação da classe Robot, permitindo apenas o movimento para o norte.
+- **App:** Classe principal que cria uma área e um robô, e executa um movimento.
 
-## Aplicativo Principal
+## Técnicas Utilizadas:
 
-O aplicativo principal cria uma instância da área, inicializa um robô e tenta movê-lo, demonstrando a lógica de movimentação dentro dos limites da área.
+- **Programação Orientada a Objetos (POO):** Utilização de herança e encapsulamento para definir robôs e áreas.
+- **Controle de Fluxo:** O método moverNorte verifica se o deslocamento não ultrapassa os limites definidos pela classe Area.
+- **Estruturas Abstratas:** Uso de classes abstratas para permitir que diferentes tipos de robôs sejam implementados com funcionalidades específicas.
